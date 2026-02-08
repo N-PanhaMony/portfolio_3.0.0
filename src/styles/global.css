@@ -80,71 +80,76 @@ ul {
 }
 
 /* ==========================
-   HEADER / NAVIGATION
+   FLOATING ROUND NAVBAR
    Path: src/components/layout/Header.jsx
 ========================== */
-header {
-  width: 100%;
-  background-color: var(--color-header-bg);
-  padding: var(--spacing-md) var(--spacing-lg);
-  box-shadow: var(--shadow-light);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+.floating-header {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: rgba(255, 255, 255, 0.95);
+
+  width: clamp(320px, 90vw, 1130px);
+  padding: 0.55rem 2.5rem;
+
+  border-radius: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  z-index: 2000;
+
+  transition:
+    width 0.3s ease,
+    padding 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-header .header-nav {
+/* shrink and subtle shadow when scrolled */
+.floating-header.scrolled {
+  width: clamp(300px, 70vw, 900px); /* 👈 smaller shell */
+  padding: 0.35rem 2rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+.floating-header .header-nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
-/* ==========================
-   NAV LINKS
-========================== */
-header .nav-links {
+.floating-header .nav-links {
   display: flex;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-sm);
 }
 
-header .nav-links a {
+.floating-header .nav-links a {
   font-weight: 500;
-  padding-bottom: var(--spacing-xs);
-  transition: border-bottom 0.2s;
+  padding: 0.5rem 1rem;          /* vertical + horizontal spacing */
+  border-radius: 50px;           /* pill-shaped like button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
 }
 
-header .nav-links a.active,
-header .nav-links a:hover {
-  border-bottom: 2px solid var(--color-primary);
+.floating-header .nav-links a:hover,
+.floating-header .nav-links a.active {
+  background-color: var(--color-primary);
+  color: white;
 }
 
-/* ==========================
-   LOGO
-========================== */
-header .logo {
-  max-height: 50px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  padding: var(--spacing-xs);
-  border-radius: var(--radius-md);
-}
-
-header .logo img {
-  height: 50px;
+.floating-header .logo img {
+  height: 50px;                  /* slightly bigger on top */
   width: auto;
   transition: all 0.3s ease;
 }
 
-header .logo:hover {
-  transform: scale(1.05);
-  box-shadow: var(--shadow-medium);
+.floating-header.scrolled .logo img {
+  height: 40px;                  /* shrink on scroll */
 }
-
-/* Shrink logo when sticky */
-header.sticky .logo {
-  max-height: 40px;
+.floating-header.scrolled .nav-links a {
+  padding: 0.4rem 0.8rem;
 }
-
 /* ==========================
    HOME PAGE
    Path: src/pages/Home.jsx
@@ -242,6 +247,7 @@ main {
   padding: var(--spacing-md) var(--spacing-lg);
   max-width: 1200px;
   margin: 0 auto;
+  padding-top: 95px;
 }
 
 /* ==========================
