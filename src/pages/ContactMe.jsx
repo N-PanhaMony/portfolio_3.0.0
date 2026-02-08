@@ -5,7 +5,7 @@ export default function ContactMe() {
       <h1>Contact Me</h1>
 
       <p>
-        Have a question or want to work together? Send me a message!
+        Let’s connect!
       </p>
 
       <form

@@ -1,4 +1,47 @@
 /* ==========================
+   GLOBAL VARIABLES
+   Path: src/styles/global.css
+========================== */
+:root {
+  /* Colors */
+  --color-bg: #fff;
+  --color-text: #111;
+  --color-secondary-text: #555;
+  --color-primary: #0070f3;
+  --color-primary-hover: #005bb5;
+  --color-header-bg: #fff;
+  --color-footer-bg: #f5f5f5;
+  --color-section-bg: #f2f2f2;
+  --color-section-bg-alt: #f2f2f2;
+
+  /* Font sizes */
+  --fs-h1: 2.5rem;
+  --fs-h2: 2rem;
+  --fs-title: 1.5rem;
+  --fs-body: 1rem;
+  --fs-small: 0.9rem;
+  --fs-badge: 0.75rem;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+   /* Border radius */
+  --radius-xs: 5%;   
+  --radius-sm: 10%;   
+  --radius-md: 15%; 
+  --radius-lg: 20%;  
+
+
+  /* Shadows */
+  --shadow-light: 0 2px 6px rgba(0,0,0,0.05);
+  --shadow-medium: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* ==========================
    GLOBAL / BASE STYLES
    Path: src/styles/global.css
 ========================== */
@@ -11,6 +54,7 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -18,10 +62,10 @@ html {
 /* Body */
 body {
   min-height: 100vh;
-  font-family: 'Inter', Arial, sans-serif; /* clean, modern font */
+  font-family: 'Inter', Arial, sans-serif;
   line-height: 1.6;
-  color: #111; /* default text color */
-  background-color: #fff; /* page background */
+  color: var(--color-text);
+  background-color: var(--color-bg);
 }
 
 /* Links */
@@ -34,15 +78,16 @@ a {
 ul {
   list-style: none;
 }
+
 /* ==========================
    HEADER / NAVIGATION
    Path: src/components/layout/Header.jsx
 ========================== */
 header {
   width: 100%;
-  background-color: #fff;
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  background-color: var(--color-header-bg);
+  padding: var(--spacing-md) var(--spacing-lg);
+  box-shadow: var(--shadow-light);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -59,18 +104,18 @@ header .header-nav {
 ========================== */
 header .nav-links {
   display: flex;
-  gap: 1.5rem;
+  gap: var(--spacing-lg);
 }
 
 header .nav-links a {
   font-weight: 500;
-  padding-bottom: 0.2rem;
+  padding-bottom: var(--spacing-xs);
   transition: border-bottom 0.2s;
 }
 
 header .nav-links a.active,
 header .nav-links a:hover {
-  border-bottom: 2px solid #0070f3; /* highlight active link */
+  border-bottom: 2px solid var(--color-primary);
 }
 
 /* ==========================
@@ -80,32 +125,121 @@ header .logo {
   max-height: 50px;
   transition: all 0.3s ease;
   cursor: pointer;
-  padding: 4px; /* adds some spacing around */
-  border-radius: 6px; /* subtle rounding if image background */
+  padding: var(--spacing-xs);
+  border-radius: var(--radius-md);
 }
-/* Path: src/components/layout/Header.jsx */
+
 header .logo img {
-  height: 50px; /* controls height */
-  width: auto;  /* maintains aspect ratio */
+  height: 50px;
+  width: auto;
   transition: all 0.3s ease;
 }
 
 header .logo:hover {
-  transform: scale(1.05); /* slight zoom on hover */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* soft hover shadow */
+  transform: scale(1.05);
+  box-shadow: var(--shadow-medium);
 }
 
 /* Shrink logo when sticky */
 header.sticky .logo {
   max-height: 40px;
 }
+
+/* ==========================
+   HOME PAGE
+   Path: src/pages/Home.jsx
+========================== */
+.intro-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 35vh;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: var(--color-section-bg);
+  border-radius: 2rem; /* modern rounded corners */
+  box-shadow: var(--shadow-light); /* subtle shadow for depth */
+  margin-bottom: var(--spacing-md);
+}
+
+
+.intro-section h1 {
+  font-size: var(--fs-h1);
+  margin-bottom: var(--spacing-sm);
+}
+
+.intro-section .title {
+  font-size: var(--fs-title);
+  color: var(--color-secondary-text);
+  margin-bottom: var(--spacing-md);
+}
+
+.intro-section .intro-description {
+  font-size: var(--fs-body);
+  max-width: 600px;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-md);
+  font-weight: 500;       /* slightly bolder to emphasize backend focus */
+}
+
+.links-container {
+  display: flex;
+  align-items: center; /* vertically center buttons and links */
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+  margin-top: var(--spacing-sm);
+}
+
+.btn-primary {
+  padding: 0.8rem 1.6rem; /* slightly bigger for better tap/click area */
+  background-color: var(--color-primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px; /* pill-shaped rounded button */
+  display: flex;        /* align text vertically */
+  align-items: center;  /* vertical center */
+  justify-content: center; /* horizontal center */
+  transition: background 0.3s, transform 0.2s;
+}
+
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  transform: scale(1.05); /* subtle hover pop effect */
+}
+
+.highlights {
+  text-align: left;
+  padding: var(--spacing-xl) var(--spacing-lg);
+  background-color: var(--color-section-bg);
+  border-radius: 2rem; /* matching rounded corners */
+  box-shadow: var(--shadow-light);
+}
+
+.highlights h2 {
+  font-size: var(--fs-h2);
+  margin-bottom: var(--spacing-md);
+}
+
+.highlights ul {
+  list-style: none;
+  padding: 0;
+  font-size: var(--fs-body);
+  color: var(--color-text);
+}
+
+.highlights ul li {
+  margin: var(--spacing-sm) 0;
+}
+
 /* ==========================
    MAIN CONTENT
    Path: main content / all pages
 ========================== */
 main {
   flex: 1;
-  padding: 4rem 2rem 2rem; /* top padding for sticky header */
+  padding: var(--spacing-md) var(--spacing-lg);
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -116,11 +250,11 @@ main {
 ========================== */
 footer {
   width: 100%;
-  padding: 2rem;
-  background: #f5f5f5;
+  padding: var(--spacing-xl);
+  background: var(--color-footer-bg);
   text-align: center;
-  font-size: 0.9rem;
-  color: #555;
+  font-size: var(--fs-small);
+  color: var(--color-secondary-text);
 }
 
 /* ==========================
@@ -130,14 +264,46 @@ footer {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 var(--spacing-lg);
 }
 
 /* ==========================
    FADE-IN ANIMATION
    Path: src/components/ui/FadeInSection.jsx / project cards / skills
 ========================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
 
+.fade-in.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================
+   TechBadge.jsx
+========================== */
+.tech-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-section-bg);
+  min-width: 80px;
+}
+
+.level {
+  font-size: var(--fs-badge);
+  color: var(--color-secondary-text);
+  margin-top: var(--spacing-xs);
+}
+
+.level.beginner { color: #ff9800; }
+.level.intermediate { color: #2196f3; }
+.level.advanced { color: #4caf50; }
 
 /* ==========================
    MEDIA QUERIES / RESPONSIVE
@@ -146,7 +312,7 @@ footer {
 @media (max-width: 768px) {
   header .header-nav {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: var(--spacing-sm);
   }
 
   header .nav-links {
@@ -155,6 +321,6 @@ footer {
   }
 
   main {
-    padding: 3rem 1rem 1rem;
+    padding: var(--spacing-xl) var(--spacing-md) 1rem;
   }
 }
