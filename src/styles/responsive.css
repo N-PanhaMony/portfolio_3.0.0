@@ -1,0 +1,15 @@
+@media (max-width: 768px) {
+  header .header-nav {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  header .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  main {
+    padding: var(--spacing-xl) var(--spacing-md) 1rem;
+  }
+}
