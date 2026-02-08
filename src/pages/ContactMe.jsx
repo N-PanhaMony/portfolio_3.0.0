@@ -1,7 +1,7 @@
 // src/pages/ContactMe.jsx
 export default function ContactMe() {
   return (
-    <section className="container">
+    <section >
       <h1>Contact Me</h1>
 
       <p>
