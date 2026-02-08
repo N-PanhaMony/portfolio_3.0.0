@@ -1,10 +1,13 @@
 import { NavLink } from "react-router-dom";
+import logo from "../../assets/icons/logo.png";
 
 export default function Header() {
   return (
     <header>
       <nav className="header-nav">
-        <h2>MoNi Portfolio</h2>
+        <div className="logo">
+          <img src={logo} alt="Your Name logo" />
+        </div>
         <div className="nav-links">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/about">About</NavLink>

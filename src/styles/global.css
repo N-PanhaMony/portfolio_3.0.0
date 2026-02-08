@@ -11,6 +11,9 @@
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /* Body */
 body {
@@ -31,7 +34,6 @@ a {
 ul {
   list-style: none;
 }
-
 /* ==========================
    HEADER / NAVIGATION
    Path: src/components/layout/Header.jsx
@@ -52,6 +54,9 @@ header .header-nav {
   align-items: center;
 }
 
+/* ==========================
+   NAV LINKS
+========================== */
 header .nav-links {
   display: flex;
   gap: 1.5rem;
@@ -68,17 +73,32 @@ header .nav-links a:hover {
   border-bottom: 2px solid #0070f3; /* highlight active link */
 }
 
-/* Logo inside header */
+/* ==========================
+   LOGO
+========================== */
 header .logo {
   max-height: 50px;
-  transition: max-height 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 4px; /* adds some spacing around */
+  border-radius: 6px; /* subtle rounding if image background */
+}
+/* Path: src/components/layout/Header.jsx */
+header .logo img {
+  height: 50px; /* controls height */
+  width: auto;  /* maintains aspect ratio */
+  transition: all 0.3s ease;
+}
+
+header .logo:hover {
+  transform: scale(1.05); /* slight zoom on hover */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* soft hover shadow */
 }
 
 /* Shrink logo when sticky */
 header.sticky .logo {
   max-height: 40px;
 }
-
 /* ==========================
    MAIN CONTENT
    Path: main content / all pages
@@ -117,16 +137,7 @@ footer {
    FADE-IN ANIMATION
    Path: src/components/ui/FadeInSection.jsx / project cards / skills
 ========================== */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
 
-.fade-in.appear {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 /* ==========================
    MEDIA QUERIES / RESPONSIVE
