@@ -1,0 +1,62 @@
+/* ==========================
+   SKILLS PAGE
+========================== */
+
+.skills-container {
+    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* responsive 2/2 grid */
+  gap: var(--spacing-md);
+}
+
+/* Reuse intro-section for each skill card */
+.skills-container .intro-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* align items to top */
+  align-items: flex-start;
+  min-height: auto; /* remove fixed min-height */
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--color-section-bg);
+  border-radius: 2rem;
+  box-shadow: var(--shadow-light);
+  margin-bottom: var(--spacing-xs);
+}
+
+.skills-container .intro-section h2 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.skills-container .intro-section ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.skills-container .intro-section ul li {
+  display: flex;
+  justify-content: space-between; /* space between skill name and level */
+  margin-bottom: var(--spacing-sm);
+  font-weight: 500;
+}
+
+.skills-container .intro-section ul li .level {
+  text-transform: capitalize;
+}
+.skills-container .intro-section h2 svg {
+  font-size: 1.5rem; /* icon size */
+}
+
+.skills-container .intro-section h2 {
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+}
+.level.beginner { color: #ff9800; }
+.level.intermediate { color: #2196f3; }
+.level.advanced { color: #4caf50; }
+.level.learning { color: #9e9e9e; }

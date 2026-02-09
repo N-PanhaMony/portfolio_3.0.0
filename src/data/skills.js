@@ -1,41 +1,49 @@
-// src/data/skills.js
+import { faReact, faNodeJs, faAws } from "@fortawesome/free-brands-svg-icons";
+import {faTools } from "@fortawesome/free-solid-svg-icons";
 
-const skills = [
+export const skillsData = [
   {
-    name: "JavaScript",
-    level: "Advanced",
-    description: "Core language for web development, including ES6+ features.",
+    category: "Frontend",
+    icon: faReact,
+    color: "#61dafb", // React blue as accent
+    skills: [
+      { name: "React", level: "Advanced" },
+      { name: "Next.js", level: "Intermediate" },
+      { name: "Tailwind / FantaCSS", level: "Intermediate" },
+      { name: "HTML / CSS / JS", level: "Advanced" },
+    ],
   },
   {
-    name: "ReactJS",
-    level: "Advanced",
-    description: "Building interactive UIs and single-page applications.",
+    category: "Backend",
+    icon: faNodeJs,
+    color: "#8cc84b", // Node green
+    skills: [
+      { name: "Node.js", level: "Advanced" },
+      { name: "Express", level: "Intermediate" },
+      { name: "Prisma", level: "Intermediate" },
+      { name: "PostgreSQL", level: "Intermediate" },
+      { name: "Firebase", level: "Learning" },
+    ],
   },
   {
-    name: "NextJS",
-    level: "Intermediate",
-    description: "Server-side rendering and static site generation with React.",
+    category: "Tools & DevOps",
+    icon: faTools,
+    color: "#f7b500",
+    skills: [
+      { name: "Git / GitHub", level: "Advanced" },
+      { name: "Docker", level: "Learning" },
+      { name: "CI/CD", level: "Intermediate" },
+      { name: "Render / Vercel / Netlify", level: "Intermediate" },
+    ],
   },
   {
-    name: "NodeJS",
-    level: "Intermediate",
-    description: "Backend development with Express and APIs.",
-  },
-  {
-    name: "Python",
-    level: "Intermediate",
-    description: "Data analysis, automation, and backend scripting.",
-  },
-  {
-    name: "TailwindCSS",
-    level: "Intermediate",
-    description: "Rapid UI styling with utility-first CSS framework.",
-  },
-  {
-    name: "FantaCSS",
-    level: "Beginner",
-    description: "Custom CSS framework for creative layouts.",
+    category: "Learning / Exploring",
+    icon: faAws,
+    color: "#ff9900",
+    skills: [
+      { name: "Kubernetes", level: "Learning" },
+      { name: "AWS", level: "Learning" },
+      { name: "System Design", level: "Learning" },
+    ],
   },
 ];
-
-export default skills;
