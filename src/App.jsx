@@ -13,10 +13,10 @@ export default function App() {
     <BrowserRouter>
       <Layout>
         <Home />
-        <About />
+        <Experience />
         <Skills />
         <Projects />
-        <Experience />
+        <About />
         <ContactMe />
       </Layout>
     </BrowserRouter>

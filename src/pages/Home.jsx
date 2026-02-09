@@ -5,9 +5,10 @@ import SocialLinks from "../components/ui/SocialLinks.jsx";
 export default function Home() {
   return (
     <>
+    <section id="home">
       {/* Intro / Hero Section */}
       <FadeInSection>
-        <section className="intro-section">
+        <div className="intro-section">
           <h1>SurSdey! I'm MoNi</h1>
           <p className="title">Software Developer</p>
           <p className="intro-description">
@@ -20,20 +21,21 @@ export default function Home() {
             </a>
             <SocialLinks />
           </div>
-        </section>
+        </div>
       </FadeInSection>
 
       {/* Quick Highlights Section */}
       <FadeInSection>
-        <section className="highlights">
+        <div className="highlights">
           <h2>What I Do</h2>
           <ul>
             <li>💻 Frontend Development: React, NextJS</li>
             <li>⚡ Backend Development: NodeJS, ExpressJS, PostgreSQL</li>
             <li>🚀 DevOps & Deployment: Docker, AWS, CI/CD</li>
           </ul>
-        </section>
+        </div>
       </FadeInSection>
+    </section>  
     </>
   );
 }
