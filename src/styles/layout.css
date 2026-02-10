@@ -7,9 +7,9 @@
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(255, 255, 255, 0.95);
-  width: clamp(320px, 90vw, 1130px);
-  padding: 0.55rem 2.5rem;
-  border-radius: 2rem;
+  width: clamp(320px, 90vw, 1143px);
+  padding: 0.3rem 0.5rem;
+  border-radius: var(--radius-sm);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
   z-index: 2000;
   transition: width 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
@@ -17,6 +17,7 @@
 
 .floating-header.scrolled {
   width: clamp(300px, 70vw, 900px);
+  border-radius: var(--radius-md);
   padding: 0.3rem 1rem;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
@@ -50,7 +51,7 @@
 }
 
 .floating-header .logo img {
-  height: 50px;
+  height: 60px;
   width: auto;
   transition: all 0.3s ease;
 }
@@ -71,7 +72,7 @@ main {
   padding: var(--spacing-md) var(--spacing-lg);
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 95px;
+  padding-top: 100px;
 }
 
 /* ==========================

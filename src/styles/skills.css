@@ -11,7 +11,7 @@
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr)); /* responsive 2/2 grid */
-  gap: var(--spacing-md);
+  gap: var(--spacing-sm);
 }
 
 /* Reuse intro-section for each skill card */
@@ -23,7 +23,7 @@
   min-height: auto; /* remove fixed min-height */
   padding: var(--spacing-md) var(--spacing-lg);
   background-color: var(--color-section-bg);
-  border-radius: 2rem;
+  border-radius: var(--radius-sm);
   box-shadow: var(--shadow-light);
   margin-bottom: var(--spacing-xs);
 }

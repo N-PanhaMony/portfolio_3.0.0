@@ -18,19 +18,6 @@
   transform: scale(1.05);
 }
 
-/* ==========================
-   TECH BADGES
-========================== */
-.tech-badge {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: var(--spacing-sm);
-  border-radius: var(--radius-sm);
-  background-color: var(--color-section-bg);
-  min-width: 80px;
-}
-
 .level {
   font-size: var(--fs-badge);
   color: var(--color-secondary-text);

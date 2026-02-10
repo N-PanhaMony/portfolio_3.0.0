@@ -1,20 +1,55 @@
-export default [
+// src/data/projects.js
+export const projectsData = [
   {
-    title: "Brogram",
-    date: "Jan 19, 2025",
-    tech: ["ReactJS", "FantaCSS", "JavaScript"],
-    skills: ["React", "JavaScript"],
-    description: "The Simple 30 Workouts Training Plan.",
-    live: "https://brogram-plan.netlify.app",
-    github: "https://github.com/jamezmca/2_brogram"
+    name: "Portfolio Website",
+    status: "Completed",
+    description: "A modern, responsive portfolio built with React, Vite, and Tailwind. This portfolio showcases all of my projects, skills, and experience in an organized and visually appealing way. Each project section includes a detailed description, technologies used, live demo links, and source code references. Smooth animations and transitions are implemented to enhance user interaction, while responsive design ensures an optimal experience on desktop, tablet, and mobile devices. Special attention was given to accessibility standards and performance optimization to provide fast load times and a professional presentation.",
+    image: "https://picsum.photos/400/300?random=1",
+    technologies: ["React", "Tailwind", "Vite", "JavaScript"],
+    liveUrl: "https://your-portfolio.com",
+    githubUrl: "https://github.com/yourusername/portfolio",
   },
   {
-    title: "Smolstore",
-    date: "Jan 24, 2025",
-    tech: ["NextJS", "FantaCSS", "Stripe"],
-    skills: ["NextJS", "Stripe"],
-    description: "A super cool store for programmers and productivity fiends!",
-    live: "https://main.d2a4evir1uyly1.amplifyapp.com/",
-    github: "https://github.com/jamezmca/3_smolstore"
+    name: "Task Automation Script",
+    status: "Ongoing",
+    description: "A Node.js script that automates repetitive tasks and improves workflow efficiency for small teams. This script handles scheduling, notifications, and file operations automatically, reducing human error and saving time. It includes logging, error handling, and modular code structure for easy maintenance. The application was built to be easily extendable, allowing additional automation tasks to be added without breaking existing functionality. Testing includes handling large data sets and ensuring consistent behavior across different operating systems.",
+    image: "https://picsum.photos/350/200?random=2",
+    technologies: ["Node.js", "JavaScript", "Cron"],
+    liveUrl: "",
+    githubUrl: "https://github.com/yourusername/task-automation",
+  },
+  {
+    name: "Blog Platform Wide Image",
+    status: "Completed",
+    description: "A full-stack blog platform with wide-ranging features for content creators and readers. It includes user authentication, post creation, editing, and deletion, as well as comment management. The platform uses Next.js for server-side rendering and fast navigation, Prisma for type-safe database interactions, and PostgreSQL for robust data storage. Tailwind CSS provides a modern and responsive interface. Admin users can moderate content, manage users, and configure site settings. Performance optimization and security best practices were applied to ensure a scalable and safe environment for publishing content online.",
+    image: "https://picsum.photos/600/300?random=3",
+    technologies: ["Next.js", "Prisma", "PostgreSQL", "Tailwind"],
+    liveUrl: "https://your-blog.com",
+    githubUrl: "https://github.com/yourusername/blog-platform",
+  },
+  {
+    name: "Blog Platform Tall Image",
+    status: "Completed",
+    description: "This project tests how tall images are displayed in a card layout with object-fit: cover. The platform includes all standard blog features such as post CRUD, user authentication, and admin dashboard functionality. Special focus is given to responsive layout adjustments and image handling, ensuring that tall, portrait-oriented images maintain visual balance within the cards without distorting content or affecting readability. Additionally, attention was paid to cross-browser compatibility and mobile optimization to provide a consistent user experience.",
+    image: "https://picsum.photos/300/500?random=4",
+    technologies: ["Next.js", "Prisma", "PostgreSQL", "Tailwind"],
+    liveUrl: "https://your-blog.com",
+    githubUrl: "https://github.com/yourusername/blog-platform",
+  },
+  {
+    name: "Blog Platform Small Image",
+    status: "Completed",
+    description: "Testing a small square image in the card layout to observe scaling and cropping behavior. The platform supports multiple users, rich text content, and media uploads. Features include category management, search functionality, and user profile customization. The interface is designed for simplicity, accessibility, and mobile-first responsiveness. Using Tailwind CSS ensures consistent spacing, typography, and layout across different devices, while Prisma and PostgreSQL provide a stable and efficient backend for storing user-generated content.",
+    image: "https://picsum.photos/200/200?random=5",
+    technologies: ["Next.js", "Prisma", "PostgreSQL", "Tailwind","Prisma", "PostgreSQL", "Tailwind"],
+    liveUrl: "https://your-blog.com",
+    githubUrl: "https://github.com/yourusername/blog-platform",
+  },
+  {
+    name: "Random Size Image",
+    status: "Completed",
+    description: "This project tests cards with random image sizes to  ",
+    image: "https://picsum.photos/500/400?random=6",
+    technologies: ["Next.js", "Tailwind"],
   }
 ];
