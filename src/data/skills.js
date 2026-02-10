@@ -1,49 +1,44 @@
-import { faReact, faNodeJs, faAws } from "@fortawesome/free-brands-svg-icons";
-import {faTools } from "@fortawesome/free-solid-svg-icons";
+import { faLaptopCode, faServer, faTools, faLightbulb } from "@fortawesome/free-solid-svg-icons";
 
 export const skillsData = [
   {
     category: "Frontend",
-    icon: faReact,
-    color: "#61dafb", // React blue as accent
+    icon: faLaptopCode,
     skills: [
-      { name: "React", level: "Advanced" },
-      { name: "Next.js", level: "Intermediate" },
-      { name: "Tailwind / FantaCSS", level: "Intermediate" },
       { name: "HTML / CSS / JS", level: "Advanced" },
+      { name: "Tailwind", level: "Beginner" },
+      { name: "React", level: "Intermediate" },
+      { name: "Next.js", level: "Beginner" },
     ],
   },
   {
     category: "Backend",
-    icon: faNodeJs,
-    color: "#8cc84b", // Node green
+    icon: faServer,
     skills: [
       { name: "Node.js", level: "Advanced" },
-      { name: "Express", level: "Intermediate" },
-      { name: "Prisma", level: "Intermediate" },
-      { name: "PostgreSQL", level: "Intermediate" },
-      { name: "Firebase", level: "Learning" },
+      { name: "Express", level: "Advanced" },
+      { name: "Prisma/PostgreSQL", level: "Beginner" },
+      { name: "Firebase", level: "Beginner" },
     ],
   },
   {
     category: "Tools & DevOps",
     icon: faTools,
-    color: "#f7b500",
     skills: [
       { name: "Git / GitHub", level: "Advanced" },
-      { name: "Docker", level: "Learning" },
-      { name: "CI/CD", level: "Intermediate" },
+      { name: "Docker", level: "Beginner" },
       { name: "Render / Vercel / Netlify", level: "Intermediate" },
+      { name: "CI/CD", level: "Learning" },
     ],
   },
   {
     category: "Learning / Exploring",
-    icon: faAws,
-    color: "#ff9900",
+    icon: faLightbulb,
     skills: [
-      { name: "Kubernetes", level: "Learning" },
-      { name: "AWS", level: "Learning" },
       { name: "System Design", level: "Learning" },
+      { name: "AWS", level: "Learning" },
+      { name: "Python / Django", level: "Learning" },
+      { name: "Go", level: "Learning" },
     ],
   },
 ];

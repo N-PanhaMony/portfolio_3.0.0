@@ -4,7 +4,7 @@ import { skillsData } from "../data/skills.js";
 
 export default function Skills() {
   return (
-    <section className="skills-container">
+    <section id="skills" className="skills-container">
       <h1 className="section-title">Skills</h1>
 
       <div className="skills-grid">
