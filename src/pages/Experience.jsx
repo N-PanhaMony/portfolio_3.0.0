@@ -47,6 +47,19 @@ export default function Experience() {
                     <li key={i}>{detail}</li>
                   ))}
                 </ul>
+
+                {job.referenceUrl && (
+                  <div className="experience-reference">
+                    <a
+                      href={job.referenceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-secondary"
+                    >
+                      Reference
+                      <i className="fas fa-arrow-up-right-from-square" style={{ marginLeft: "0.4rem" }}></i>
+                    </a>
+                  </div>)}
               </div>
             </div>
           ))}

@@ -7,6 +7,7 @@ export const educationData = [
     degree: "Bachelor of Science in Computer Science and Engineering",
     location: "Phnom Penh, Cambodia",
     duration: "2020 - 2024",
+    // referenceUrl: "https://drive.google.com/your-pdf-link-here",
     details: [
       "Core in programming, algorithms & software engineering.",
       "Hands-on experience in web development & databases.",
@@ -22,11 +23,11 @@ export const workData = [
     position: "IT Support / Data Entry",
     location: "Phnom Penh, Cambodia",
     duration: "2023 - Present",
+    referenceUrl: "https://drive.google.com/file/d/1URjedLljvtCSdwd3hgyqatYI2A6NqD_A/view?usp=sharing",
     details: [
-      "Verified and maintained office data to ensure compliance with national reporting standards.",
-      "Streamlined data entry processes for multiple offices, improving efficiency and reducing errors.",
-      "1st Operation: Integrated organizational data with the Ministry of Civil Service system, inputting detailed office records across all departments (2–3 months).",
-      "2nd Operation: Managed and updated office records focusing on staff marital status and dependents (1 month)."
+      "Performed accurate data entry, correction, and documentation in government information systems, following official procedures and data standards.",
+      "1st Operation – HRMIS Civil Servant Data Validation (External): Validated and updated civil servant data in HRMIS, including personal & demographic details, employment and position information, service history, and office structure, in coordination between the Ministry of Civil Service (MCS) and the Ministry of Culture and Fine Arts (MCFA) (2–3 months).",
+      "2nd Operation – HRMIS Civil Servant Data Validation (Internal): Continued HRMIS data validation within MCFA, focusing on marital status and dependents, updating and refining previous civil servant records (1 month)."
     ]
   }
 ];

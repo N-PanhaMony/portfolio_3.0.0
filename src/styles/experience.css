@@ -23,6 +23,7 @@
   gap: var(--spacing-lg);
   align-items: flex-start;
   margin-top: var(--spacing-md);
+  min-width: 0
 }
 
 .experience-logo {
@@ -47,4 +48,27 @@
   list-style: disc;
   padding-left: 1.5rem;
   color: var(--color-text);
+}
+.experience-reference a {
+  font-weight: 500;                 /* medium weight */
+  padding: 0.5rem 1rem;             /* comfortable clickable area */
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;                
+  transition: all 0.2s ease;
+}
+
+.experience-reference a:hover {
+  font-weight: 400; 
+  transform: scale(1.05);           /* subtle pop effect */
+}
+.experience-reference a i {
+  font-size: 1em;                     /* same as text */
+  color: inherit;                     /* same as link color */
+}
+.experience-reference a:hover {
+  font-weight: 400;
+  transform: scale(1.05);
+  color: var(--color-primary-hover);  /* hover color */
 }
