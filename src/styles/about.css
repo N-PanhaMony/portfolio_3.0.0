@@ -1,0 +1,137 @@
+/* --------------------------
+   About Page Styles
+----------------------------*/
+
+/* Container */
+.about-container {
+  padding: 0;
+}
+.section-title {
+  font-size: var(--fs-h1);
+  text-align: center;
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+}
+.section-title {
+  font-size: var(--fs-h1);
+  text-align: center;
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+}
+/* Grid layout: left fixed, right flexible */
+.about-grid {
+  display: grid;
+  grid-template-columns: 350px 1fr; /* left fixed, right flexible */
+  gap: var(--spacing-sm);
+}
+
+/* Reuse intro-section style for each side */
+.about-container .intro-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* align top */
+  align-items: flex-start;
+  min-height: auto;
+  /* padding: var(--spacing-xs) var(--spacing-md); */
+  background-color: var(--color-section-bg);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-light);
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+}
+
+/* Left & Right specific adjustments */
+.about-left,
+.about-right {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section Titles */
+.about-left h3,
+.about-right h2{
+  font-size: var(--fs-subtitle);
+}
+
+/* Profile Image */
+.about-image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: var(--spacing-md);
+}
+
+.about-image img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+/* Core Strengths List */
+.about-highlights ul,
+.experience-details {
+  list-style: disc;
+  padding-left: 0.5rem;
+  color: var(--color-text);
+  margin: 0;
+}
+
+/* About Description */
+.about-description {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* Mini Stats */
+.about-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.about-stats div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.stat-number {
+  font-weight: 700;
+  font-size: var(--fs-subtitle);
+}
+
+.stat-label {
+  font-size: var(--fs-body);
+  color: var(--color-secondary-text);
+}
+
+/* Download CV Button */
+.about-actions {
+  margin-top: auto; /* push button to bottom if section is tall */
+}
+
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-primary);
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+}
+
+.btn-download:hover {
+  transform: scale(1.05);
+  background-color: var(--color-primary-hover);
+}
+
+/* Responsive Adjustments */
