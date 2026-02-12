@@ -4,25 +4,25 @@
 
 /* Container */
 .about-container {
-  padding: 0;
+  padding: 0 ;
 }
+
+/* Page Title */
 .section-title {
   font-size: var(--fs-h1);
   text-align: center;
   margin-top: var(--spacing-lg);
   margin-bottom: var(--spacing-sm);
 }
-.section-title {
-  font-size: var(--fs-h1);
-  text-align: center;
-  margin-top: var(--spacing-lg);
-  margin-bottom: var(--spacing-sm);
-}
-/* Grid layout: left fixed, right flexible */
+
+/* --------------------------
+   Grid Layout: Left fixed, Right flexible
+----------------------------*/
 .about-grid {
   display: grid;
   grid-template-columns: 350px 1fr; /* left fixed, right flexible */
   gap: var(--spacing-sm);
+  align-items: stretch; /* make both columns same height */
 }
 
 /* Reuse intro-section style for each side */
@@ -32,33 +32,50 @@
   justify-content: flex-start; /* align top */
   align-items: flex-start;
   min-height: auto;
-  /* padding: var(--spacing-xs) var(--spacing-md); */
   background-color: var(--color-section-bg);
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-light);
   margin-bottom: var(--spacing-md);
-  padding-bottom: var(--spacing-md);
+  padding: var(--spacing-md);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease-out;
 }
-
+.about-container .intro-section:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
 /* Left & Right specific adjustments */
 .about-left,
 .about-right {
   display: flex;
   flex-direction: column;
+  height: 100%; /* stretch to grid height */
 }
 
-/* Section Titles */
+.about-left {
+  justify-content: flex-start; /* profile + core strengths on top */
+}
+
+.about-right {
+  justify-content: space-between; /* push stats + CV button to bottom */
+}
+
+/* --------------------------
+   Section Titles
+----------------------------*/
 .about-left h3,
-.about-right h2{
+.about-right h2 {
   font-size: var(--fs-subtitle);
+  margin-bottom: var(--spacing-sm);
 }
 
-/* Profile Image */
+/* --------------------------
+   Profile Image
+----------------------------*/
 .about-image {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding: var(--spacing-md);
+  padding: var(--spacing-md) 0;
 }
 
 .about-image img {
@@ -68,7 +85,9 @@
   border-radius: 0.5rem;
 }
 
-/* Core Strengths List */
+/* --------------------------
+   Core Strengths / Highlights
+----------------------------*/
 .about-highlights ul,
 .experience-details {
   list-style: disc;
@@ -77,16 +96,21 @@
   margin: 0;
 }
 
-/* About Description */
+/* --------------------------
+   About Description
+----------------------------*/
 .about-description {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
   color: var(--color-text);
   line-height: 1.6;
+  flex-grow: 1; /* expand to fill right side */
 }
 
-/* Mini Stats */
+/* --------------------------
+   Mini Stats
+----------------------------*/
 .about-stats {
   display: flex;
   flex-wrap: wrap;
@@ -94,7 +118,7 @@
   margin: 1rem 0;
 }
 
-.about-stats div {
+.stat-card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -110,9 +134,11 @@
   color: var(--color-secondary-text);
 }
 
-/* Download CV Button */
+/* --------------------------
+   Download CV Button
+----------------------------*/
 .about-actions {
-  margin-top: auto; /* push button to bottom if section is tall */
+  margin-top: auto; /* push button to bottom */
 }
 
 .btn-download {
@@ -126,7 +152,6 @@
   font-weight: 500;
   text-decoration: none;
   transition: all 0.2s ease;
-
 }
 
 .btn-download:hover {
@@ -134,4 +159,3 @@
   background-color: var(--color-primary-hover);
 }
 
-/* Responsive Adjustments */

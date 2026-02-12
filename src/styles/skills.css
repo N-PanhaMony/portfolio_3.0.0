@@ -12,6 +12,7 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr)); /* responsive 2/2 grid */
   gap: var(--spacing-sm);
+  
 }
 
 /* Reuse intro-section for each skill card */
@@ -26,6 +27,11 @@
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-light);
   margin-bottom: var(--spacing-xs);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease-out;
+}
+.skills-container .intro-section:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .skills-container .intro-section h2 {

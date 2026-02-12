@@ -3,14 +3,18 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* align items to top instead of centering */
-  align-items: flex-start;
   min-height: auto; /* remove the fixed min-height */
   padding: var(--spacing-md) var(--spacing-lg);
   background-color: var(--color-section-bg);
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-light);
-  margin-bottom: var(--spacing-md);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease-out;
 }
+.experience-container .intro-section:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+  
 .section-title {
   font-size: var(--fs-h1);
   text-align: center;
