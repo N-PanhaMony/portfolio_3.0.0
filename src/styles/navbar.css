@@ -21,6 +21,9 @@
   padding: 0.3rem 1rem;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
+.floating-header.scrolled:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
 
 .floating-header .header-nav {
   display: flex;
