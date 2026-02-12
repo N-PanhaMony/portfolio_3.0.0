@@ -1,0 +1,65 @@
+/* ==========================
+   FLOATING ROUND NAVBAR
+========================== */
+.floating-header {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.95);
+  width: clamp(320px, 90vw, 1143px);
+  padding: 0.3rem 0.5rem;
+  border-radius: var(--radius-sm);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  z-index: 2000;
+  transition: width 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-header.scrolled {
+  width: clamp(300px, 70vw, 900px);
+  border-radius: var(--radius-md);
+  padding: 0.3rem 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.floating-header .header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.floating-header .nav-links {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.floating-header .nav-links a {
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.floating-header .nav-links a:hover,
+.floating-header .nav-links a.active {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.floating-header .logo img {
+  height: 60px;
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+.floating-header.scrolled .logo img {
+  height: 40px;
+}
+
+.floating-header.scrolled .nav-links a {
+  padding: 0.4rem 0.8rem;
+}

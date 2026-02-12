@@ -1,60 +1,43 @@
 import FadeInSection from "../components/ui/FadeInSection.jsx";
-import SocialLinks from "../components/ui/SocialLinks.jsx"; // optional, for icons
+import SocialLinks from "../components/ui/SocialLinks.jsx";
 
 export default function ContactMe() {
   return (
     <section id="contact" className="contact-container">
-      
-      {/* Section Title */}
+
+      {/* Page Heading */}
       <FadeInSection>
-        <div className="intro-section contact-intro">
-          <h1 className="section-title">Let’s Connect</h1>
+        <div className="contact-header">
+          <h1 className="section-title">Get in Touch</h1>
           <p className="section-subtitle">
-            I’m always open to new opportunities, collaborations, or tech discussions. 
-            Feel free to reach out via the platforms below.
+            I’m always open to opportunities, collaborations, or tech discussions. 
+            Let’s connect and create something impactful together!
           </p>
         </div>
       </FadeInSection>
 
-      {/* Contact Links */}
+      {/* Contact Card / Intro Section */}
       <FadeInSection>
-        <div className="intro-section contact-links">
-          <div className="contact-cards">
+        <div className="intro-section contact-intro">
 
-            {/* LinkedIn */}
-            <a 
-              href="https://www.linkedin.com/in/YOUR_LINKEDIN" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="contact-card"
-            >
-              <i className="fab fa-linkedin"></i>
-              <span>LinkedIn</span>
-            </a>
+          {/* Greeting */}
+          <h2 className="contact-greeting">Let’s Connect</h2>
+          <p className="contact-description">
+            Whether you want to discuss a project, share ideas, or just say hi, 
+            feel free to reach out. I love collaborating with fellow developers, designers, 
+            and creative thinkers.
+          </p>
 
-            {/* GitHub */}
-            <a 
-              href="https://github.com/YOUR_GITHUB" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="contact-card"
-            >
-              <i className="fab fa-github"></i>
-              <span>GitHub</span>
-            </a>
-
-            {/* Telegram */}
-            <a 
-              href="https://t.me/YOUR_TELEGRAM" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="contact-card"
-            >
-              <i className="fab fa-telegram"></i>
-              <span>Telegram</span>
-            </a>
-
+          {/* Social Links */}
+          <div className="contact-links">
+            <SocialLinks />
           </div>
+
+          {/* Optional small note */}
+          <p className="contact-note">
+            Looking forward to hearing from you!
+          </p>
+
         </div>
       </FadeInSection>
 

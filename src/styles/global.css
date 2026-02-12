@@ -3,9 +3,11 @@
 @import './base.css';
 @import './layout.css';
 @import './components.css';
+@import './navbar.css';
 @import './home.css';
 @import './responsive.css';
 @import './experience.css';
 @import './skills.css';
 @import './projects.css';
 @import './about.css';
+@import './contactme.css';
