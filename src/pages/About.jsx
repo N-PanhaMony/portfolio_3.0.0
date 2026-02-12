@@ -1,6 +1,5 @@
 import FadeInSection from "../components/ui/FadeInSection.jsx";
 import "../styles/about.css";
-import "../styles/experience.css"; // for .intro-section styles
 import ProfileImage from "../assets/icons/Profile.png";
 
 export default function About() {
@@ -18,7 +17,6 @@ export default function About() {
               <img 
                 src={ProfileImage} 
                 alt="Your Name" 
-                className="experience-logo" // reuse style
               />
             </div>
 
