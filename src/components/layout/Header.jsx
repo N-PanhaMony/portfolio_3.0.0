@@ -1,5 +1,3 @@
-// src/components/layout/Header.jsx
-
 import { useState, useEffect } from "react";
 import logo from "../../assets/icons/logo_v3.png";
 
@@ -15,7 +13,6 @@ export default function Header() {
 
   const toggleTheme = () => {
     const currentTheme = document.documentElement.getAttribute("data-theme");
-
     if (currentTheme === "dark") {
       document.documentElement.removeAttribute("data-theme");
       setIsDark(false);
@@ -28,7 +25,6 @@ export default function Header() {
   return (
     <header className={`floating-header ${isScrolled ? "scrolled" : ""}`}>
       <nav className="header-nav">
-
         <div className="logo">
           <img src={logo} alt="MoNi logo" />
         </div>
@@ -49,7 +45,6 @@ export default function Header() {
         >
           {isDark ? "☀️" : "🌙"}
         </button>
-
       </nav>
     </header>
   );
