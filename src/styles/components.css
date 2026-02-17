@@ -4,13 +4,19 @@
 .btn-primary {
   padding: 0.8rem 1.6rem;
   background-color: var(--color-primary);
-  color: white;
-  text-decoration: none;
-  border-radius: 50px;
-  display: flex;
+  color: #0f172a;
+  border-radius: 999px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.3s, transform 0.2s;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: var(--glow-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
 }
 
 /* ==========================
@@ -29,18 +35,7 @@
 /*
 social-links
 */
-.social-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.2rem;
-  flex-wrap: wrap;
-}
-
 .social-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   width: 3.2rem;
   height: 3.2rem;
   font-size: 1.5rem;
@@ -48,15 +43,16 @@ social-links
   background-color: var(--color-section-bg);
   border-radius: 50%;
   box-shadow: var(--shadow-light);
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .social-link:hover {
-  transform: scale(1.2);
-  color: #fff;
+  transform: translateY(-3px);
+  color: #0f172a;
   background-color: var(--color-primary);
-  box-shadow: var(--shadow-medium);
+  box-shadow: var(--glow-primary);
 }
+
 .tech-badge {
   display: inline-flex;
   align-items: center;

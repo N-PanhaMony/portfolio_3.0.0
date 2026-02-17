@@ -1,6 +1,6 @@
 // src/components/layout/Header.jsx
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/icons/logo_v2.png";
+import logo from "../../assets/icons/logo_v3.png";
 import { useState, useEffect } from "react";
 
 export default function Header() {

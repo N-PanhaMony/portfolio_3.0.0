@@ -1,6 +1,6 @@
 import FadeInSection from "../components/ui/FadeInSection.jsx";
 import "../styles/about.css";
-import ProfileImage from "../assets/icons/Profile.png";
+import ProfileImage from "../assets/icons/Profile_noBG.png";
 
 export default function About() {
   return (
