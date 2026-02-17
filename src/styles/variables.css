@@ -1,12 +1,7 @@
-/* ==========================
-   GLOBAL VARIABLES / DESIGN TOKENS
-========================== */
-
 /* ======================
    LIGHT MODE (DEFAULT)
 ====================== */
 :root {
-
   /* Background */
   --color-bg: #ffffff;
   --color-bg-soft: #f8fafc;
@@ -17,11 +12,11 @@
   --color-text: #0f172a;
   --color-secondary-text: #475569;
 
-  /* Accent (Keep Logo Cyan) */
-  --color-primary: #00bcd4;
-  --color-primary-hover: #0097a7;
-  --color-accent-glow: #38bdf8;
-
+  /* Accent (Dark Blue-Cyan) */
+  --color-primary: #0077aa;       /* darker cyan-blue */
+  --color-primary-hover: #005f88; /* deeper for hover */
+  --color-accent-glow: #0099cc;   /* subtle glow */
+  
   --color-header-bg: rgba(255, 255, 255, 0.8);
   --color-footer-bg: #f1f5f9;
 
@@ -50,14 +45,13 @@
   --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.06);
   --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.12);
 
-  --glow-primary: 0 0 10px rgba(0, 188, 212, 0.4);
+  --glow-primary: 0 0 10px rgba(0, 136, 204, 0.5); /* match darker cyan-blue */
 }
+
 /* ======================
    DARK MODE
 ====================== */
-
 [data-theme="dark"] {
-
   --color-bg: #0f172a;
   --color-bg-soft: #111827;
   --color-section-bg: #1e293b;
@@ -66,15 +60,15 @@
   --color-text: #e2e8f0;
   --color-secondary-text: #94a3b8;
 
-  --color-primary: #00d4ff;
-  --color-primary-hover: #00a8cc;
+  /* Dark Mode Accent (darker blue-cyan) */
+  --color-primary: #0088cc;       /* darker blue-cyan for dark mode */
+  --color-primary-hover: #006699; /* deeper hover */
+  --glow-primary: 0 0 10px rgba(0, 136, 204, 0.6),
+                  0 0 20px rgba(0, 136, 204, 0.3);
 
   --color-header-bg: rgba(15, 23, 42, 0.8);
   --color-footer-bg: #0b1220;
 
   --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.25);
   --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.35);
-
-  --glow-primary: 0 0 10px rgba(0, 212, 255, 0.6),
-                  0 0 20px rgba(0, 212, 255, 0.3);
 }

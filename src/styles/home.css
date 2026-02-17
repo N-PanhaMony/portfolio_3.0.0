@@ -37,11 +37,6 @@
   margin-bottom: var(--spacing-sm);
 }
 
-.intro-section .title {
-  font-size: var(--fs-title);
-  color: var(--color-secondary-text);
-  margin-bottom: var(--spacing-md);
-}
 
 .intro-section .intro-description {
   font-size: var(--fs-body);
