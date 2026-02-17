@@ -25,9 +25,10 @@ export default function Projects() {
                 </div>
 
                 <div className="project-links">
-                  {project.liveUrl && <a href={project.liveUrl}>Website</a>}
-                  {project.githubUrl && <a href={project.githubUrl}>Source</a>}
+                  {project.liveUrl && <a href={project.liveUrl} className="website">Website</a>}
+                  {project.githubUrl && <a href={project.githubUrl} className="source">Source</a>}
                 </div>
+
               </div>
             </section>
           </FadeInSection>
