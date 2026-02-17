@@ -1,10 +1,11 @@
 // src/components/layout/Header.jsx
-import { NavLink } from "react-router-dom";
-import logo from "../../assets/icons/logo_v3.png";
+
 import { useState, useEffect } from "react";
+import logo from "../../assets/icons/logo_v3.png";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -12,9 +13,22 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const toggleTheme = () => {
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+
+    if (currentTheme === "dark") {
+      document.documentElement.removeAttribute("data-theme");
+      setIsDark(false);
+    } else {
+      document.documentElement.setAttribute("data-theme", "dark");
+      setIsDark(true);
+    }
+  };
+
   return (
     <header className={`floating-header ${isScrolled ? "scrolled" : ""}`}>
       <nav className="header-nav">
+
         <div className="logo">
           <img src={logo} alt="MoNi logo" />
         </div>
@@ -27,6 +41,15 @@ export default function Header() {
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </div>
+
+        <button
+          className="theme-toggle"
+          onClick={toggleTheme}
+          aria-label="Toggle dark mode"
+        >
+          {isDark ? "☀️" : "🌙"}
+        </button>
+
       </nav>
     </header>
   );
