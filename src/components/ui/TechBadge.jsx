@@ -1,77 +1,80 @@
 // src/components/ui/TechBadge.jsx
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { 
-  faReact, faNodeJs, faPython, faAws, faJsSquare, faPhp, faJava, faDocker, faGitAlt, faGithub, faHtml5, faCss3Alt, faLinux, faAngular, faVuejs, faSass, faFigma 
+import {
+  faReact,
+  faNodeJs,
+  faDocker,
+//   faGitAlt,
+  faGithub,
+  faAws
 } from "@fortawesome/free-brands-svg-icons";
-import { 
-  faLightbulb, faDatabase, faServer, faCode, faTerminal, faCloud, faCogs, faBolt, faLayerGroup, faTools, faFileCode 
+
+import {
+//   faServer,
+//   faDatabase,
+  faCloud,
+  faCogs,
+  faLayerGroup,
+  faCode,
+  faFileCode
 } from "@fortawesome/free-solid-svg-icons";
 
-// Complete fallback icon map
+/* 🔥 Real Brand Icons (Simple Icons via react-icons) */
+import {
+  SiTailwindcss,
+  SiPostgresql,
+  SiFirebase,
+  SiGo,
+  SiExpress,
+  SiPrisma
+} from "react-icons/si";
+
 const iconMap = {
-  // Frontend
-  React: faReact,
-  "React.js": faReact,
-  "Next.js": faReact,
-  Angular: faAngular,
-  Vue: faVuejs,
-  "HTML / CSS / JS": faHtml5,
-  HTML: faHtml5,
-  CSS: faCss3Alt,
-  JavaScript: faJsSquare,
-  Tailwind: faCode,
-  Sass: faSass,
-  Figma: faFigma,
+  /* ==========================
+     FRONTEND
+  ========================== */
+  React: <FontAwesomeIcon icon={faReact} size="sm" />,
+  "Next.js": <FontAwesomeIcon icon={faReact} size="sm" />,
+  "HTML / CSS / JS": <FontAwesomeIcon icon={faCode} size="sm" />,
+  Tailwind: <SiTailwindcss size={14} />,
 
-  // Backend
-  "Node.js": faNodeJs,
-  NodeJS: faNodeJs,
-  Express: faServer,
-  Python: faPython,
-  Django: faPython,
-  Java: faJava,
-  PHP: faPhp,
-  RESTfulAPI: faServer,
-  GraphQL: faBolt,
+  /* ==========================
+     BACKEND
+  ========================== */
+  "Node.js": <FontAwesomeIcon icon={faNodeJs} size="sm" />,
+  Express: <SiExpress size={14} />,
+  "Prisma / PostgreSQL": <SiPostgresql size={14} />,
+  Firebase: <SiFirebase size={14} />,
 
-  // Database
-  PostgreSQL: faDatabase,
-  MySQL: faDatabase,
-  MongoDB: faDatabase,
-  Firebase: faDatabase,
-  Redis: faDatabase,
-  SQLite: faDatabase,
+  /* ==========================
+     DEVOPS
+  ========================== */
+  Docker: <FontAwesomeIcon icon={faDocker} size="sm" />,
+  "Git / GitHub": <FontAwesomeIcon icon={faGithub} size="sm" />,
+  Render: <FontAwesomeIcon icon={faCloud} size="sm" />,
+  "CI/CD": <FontAwesomeIcon icon={faCogs} size="sm" />,
 
-  // DevOps / Tools
-  Docker: faDocker,
-  Git: faGitAlt,
-  "Git / GitHub": faGithub,
-  Linux: faLinux,
-  CI_CD: faCogs,
-  AWS: faAws,
-  Cloud: faCloud,
-  Terminal: faTerminal,
-  Vite: faCode,
-  Render: faCloud,
-  Netlify: faCloud,
-  "Prisma / PostgreSQL": faDatabase,
-  "System Design": faLayerGroup,
-  Tools: faTools,
-  Learning: faLightbulb,
+  /* ==========================
+     EXPLORING
+  ========================== */
+  "System Design": <FontAwesomeIcon icon={faLayerGroup} size="sm" />,
+  AWS: <FontAwesomeIcon icon={faAws} size="sm" />,
+  "Python / Django": <FontAwesomeIcon icon={faCode} size="sm" />,
+  Go: <SiGo size={14} />,
 
-  // Fallback
-  default: faFileCode,
+  /* ==========================
+     DEFAULT
+  ========================== */
+  default: <FontAwesomeIcon icon={faFileCode} size="sm" />,
 };
 
-export default function TechBadge({ name, icon }) {
-  // 1️⃣ Use icon passed as prop
-  // 2️⃣ Use iconMap fallback
-  // 3️⃣ Use default file/code icon
-  const finalIcon = icon || iconMap[name] || iconMap.default;
+export default function TechBadge({ name }) {
+  const iconComponent = iconMap[name] || iconMap.default;
 
   return (
     <div className="tech-badge">
-      <FontAwesomeIcon icon={finalIcon} size="sm" />
+      {iconComponent}
       <span>{name}</span>
     </div>
   );

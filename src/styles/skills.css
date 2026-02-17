@@ -22,7 +22,7 @@
   justify-content: flex-start; /* align items to top */
   align-items: flex-start;
   min-height: auto; /* remove fixed min-height */
-  padding: var(--spacing-md) var(--spacing-lg);
+  padding: var(--spacing-sm) var(--spacing-md);
   background-color: var(--color-section-bg);
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-light);
@@ -40,7 +40,6 @@
 
 .skills-container .intro-section ul {
   list-style: none;
-  padding: 0;
   width: 100%;
 }
 
@@ -56,6 +55,7 @@
 }
 .skills-container .intro-section h2 svg {
   font-size: 1.5rem; /* icon size */
+  margin-left: var(--spacing-sm);
 }
 
 .skills-container .intro-section h2 {
@@ -71,44 +71,7 @@
   margin-bottom: var(--spacing-sm);
   width: 100%;
 }
-
-/* Make TechBadge smaller for Skills page */
 .skills-container .tech-badge {
-  padding: 0.3rem 0.7rem;
   font-size: 0.85rem;
-}
-/* ==========================
-   LEVEL STYLES
-========================== */
-
-.level {
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 0.25rem 0.6rem;
-  border-radius: 999px;
-  letter-spacing: 0.3px;
-}
-
-/* Beginner */
-.level.beginner {
-  background: rgba(255, 152, 0, 0.12);
-  color: #ff9800;
-}
-
-/* Intermediate */
-.level.intermediate {
-  background: rgba(33, 150, 243, 0.12);
-  color: #2196f3;
-}
-
-/* Advanced */
-.level.advanced {
-  background: rgba(76, 175, 80, 0.12);
-  color: #4caf50;
-}
-
-/* Learning */
-.level.learning {
-  background: rgba(158, 158, 158, 0.12);
-  color: #9e9e9e;
+  gap: var(--spacing-xs);
 }
