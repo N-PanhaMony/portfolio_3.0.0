@@ -1,78 +1,138 @@
-/* Experience sections use same style as intro-section but less vertical space */
-.experience-container .intro-section {
+/* ==========================
+   EXPERIENCE PAGE
+========================== */
+
+/* Container & Intro Sections */
+.experience-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* align items to top instead of centering */
-  min-height: auto; /* remove the fixed min-height */
-  padding: var(--spacing-md) var(--spacing-lg);
-  background-color: var(--color-section-bg);
+}
+/* Type label (Education / Professional Experience) */
+.experience-type {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-section-bg);
+  background-color: var(--color-primary-hover);
+  padding: 0.25rem 0.5rem;
   border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-light);
-  border: 1px solid #e5e7eb;
-  transition: all 0.3s ease-out;
-}
-.experience-container .intro-section:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-  
-.section-title {
-  font-size: var(--fs-h1);
-  text-align: center;
-  margin-top: var(--spacing-lg);
+  align-self: flex-start;
   margin-bottom: var(--spacing-sm);
 }
 
-.experience-item {
+
+/* Intro sections wrapper (Education / Work) */
+.experience-container .intro-section {
   display: flex;
-  gap: var(--spacing-lg);
-  align-items: flex-start;
-  margin-top: var(--spacing-md);
-  min-width: 0
+  flex-direction: column;
+  justify-content: flex-start; /* top-aligned */
+  min-height: auto;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: var(--color-section-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-light);
+  border: 1px solid var(--color-section-bg-alt);
+  transition: all 0.3s ease;
 }
 
+.experience-container .intro-section:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+/* Page title */
+.section-title {
+  font-size: var(--fs-h1);
+  text-align: center;
+  margin: var(--spacing-lg) 0 var(--spacing-md) 0;
+  color: var(--color-primary);
+}
+
+/* Each experience item */
+.experience-item {
+  display: flex;
+  flex-wrap: nowrap; /* no wrapping */
+  padding: var(--spacing-sm);
+
+}
+
+.experience-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0; /* allows text to shrink instead of wrapping */
+}
+
+
+
+/* Logo */
 .experience-logo {
   width: 80px;
   height: 80px;
   object-fit: contain;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  margin-right: var(--spacing-md);
 }
 
+/* Info section */
+.experience-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+/* Headings */
 .experience-info h3 {
-  margin-bottom: var(--spacing-sm);
   font-size: var(--fs-title);
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text);
 }
 
-.experience-duration {
+.experience-info .experience-position,
+.experience-info .experience-location,
+.experience-info .experience-duration {
   font-size: var(--fs-body);
   color: var(--color-secondary-text);
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
 }
 
+/* Details */
 .experience-details {
   list-style: disc;
   padding-left: 1.5rem;
   color: var(--color-text);
+  margin-bottom: var(--spacing-sm);
 }
+
+/* Reference / External Link Button */
 .experience-reference a {
-  font-weight: 500;                 /* medium weight */
-  padding: 0.5rem 1rem;             /* comfortable clickable area */
-  text-decoration: none;
   display: inline-flex;
   align-items: center;
-  justify-content: center;                
+  justify-content: center;
+  gap: 0.4rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: var(--color-primary);
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
   transition: all 0.2s ease;
+  margin-top: var(--spacing-sm);
 }
 
 .experience-reference a:hover {
-  font-weight: 400; 
-  transform: scale(1.05);           /* subtle pop effect */
-}
-.experience-reference a i {
-  font-size: 1em;                     /* same as text */
-  color: inherit;                     /* same as link color */
-}
-.experience-reference a:hover {
-  font-weight: 400;
   transform: scale(1.05);
-  color: var(--color-primary-hover);  /* hover color */
+  color: var(--color-bg);
+  background-color: var(--color-primary-hover);
+  box-shadow: var(--glow-primary);
 }
+
+.experience-reference a i {
+  font-size: 1em;
+  color: inherit;
+}
+

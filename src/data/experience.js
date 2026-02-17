@@ -1,23 +1,22 @@
 // src/data/experience.js
 
-export const educationData = [
+export const experienceData = [
   {
-    logo: "/src/assets/icons/school-logo.png",
+    type: "Education",
+    logo: "/src/assets/icons/rupp_noBG.png",
     name: "Royal University of Phnom Penh",
-    degree: "Bachelor of Science in Computer Science and Engineering",
+    position: "Bachelor of Science in Computer Science and Engineering",
     location: "Phnom Penh, Cambodia",
     duration: "2020 - 2024",
-    // referenceUrl: "https://drive.google.com/your-pdf-link-here",
     details: [
       "Core in programming, algorithms & software engineering.",
       "Hands-on experience in web development & databases.",
       "Built full-stack apps and automation projects.",
       "Active in collaborative labs."
     ]
-  }
-];
-export const workData = [
+  },
   {
+    type: "Career",
     logo: "/src/assets/icons/MoCFA_logo.png",
     name: "Ministry of Culture and Fine Arts",
     position: "IT Support / Data Entry",
