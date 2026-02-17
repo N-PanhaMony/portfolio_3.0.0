@@ -9,7 +9,10 @@ export default function Home() {
       {/* Intro / Hero Section */}
       <FadeInSection>
         <div className="intro-section">
-          <h1>SurSdey! I'm MoNi</h1>
+          <h1>
+            SurSdey! <span className="highlight-name">I'm MoNi</span>
+          </h1>
+
           <p className="title">Software Developer</p>
           <p className="intro-description">
             I’m passionate about technology and automation. I build systems and scripts that optimize workflows and solve complex problems. A self-taught developer, I love researching new tools, experimenting with code, and crafting clean, scalable solutions.
