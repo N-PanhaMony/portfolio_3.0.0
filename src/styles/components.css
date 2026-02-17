@@ -44,15 +44,15 @@
   background-color: var(--color-section-bg);
   border-radius: 50%;
   box-shadow: var(--shadow-light);
-  display: flex;                 /* ensure flex */
+  display: inline-block;                 /* ensure flex */
+  flex-direction: column;
   align-items: center;           /* vertical center */
   justify-content: center;       /* horizontal center */
   transition: all 0.3s ease;
 }
 
 .social-link svg,
-.social-link i {
-  display: block;                /* removes inline spacing issues */
+.social-link i {       
   width: 1.5rem;                 /* force consistent size */
   height: 1.5rem;
 }

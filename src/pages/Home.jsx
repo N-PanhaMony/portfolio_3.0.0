@@ -1,12 +1,10 @@
-// src/pages/Home.jsx
 import FadeInSection from "../components/ui/FadeInSection.jsx";
 import SocialLinks from "../components/ui/SocialLinks.jsx";
 
 export default function Home() {
   return (
-    <>
     <section id="home">
-      {/* Intro / Hero Section */}
+      {/* Hero / Intro Section */}
       <FadeInSection>
         <div className="intro-section">
           <h1>
@@ -14,9 +12,11 @@ export default function Home() {
           </h1>
 
           <p className="title">Software Developer</p>
+
           <p className="intro-description">
             I’m passionate about technology and automation. I build systems and scripts that optimize workflows and solve complex problems. A self-taught developer, I love researching new tools, experimenting with code, and crafting clean, scalable solutions.
           </p>
+
           <div className="links-container">
             <a className="btn-primary" href="mailto:youremail@example.com">
               Contact Me
@@ -37,7 +37,6 @@ export default function Home() {
           </ul>
         </div>
       </FadeInSection>
-    </section>  
-    </>
+    </section>
   );
 }
