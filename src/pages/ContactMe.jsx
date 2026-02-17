@@ -18,7 +18,7 @@ export default function ContactMe() {
 
       {/* Contact Card / Intro Section */}
       <FadeInSection>
-        <div className="intro-section contact-intro">
+        <div className="contact-intro">
 
           {/* Greeting */}
           <h2 className="contact-greeting">Let’s Connect</h2>

@@ -5,7 +5,8 @@ import ProfileImage from "../assets/icons/Profile_noBG.png";
 export default function About() {
   return (
     <section id="about" className="about-container">
-      <h1 className="section-title">Let Me Introduce Myself</h1>
+     <h1 className="section-title">About Me</h1>
+        <h2 className="section-subtitle">Backend & Full-Stack Development Focus</h2>
 
       <div className="about-grid">
 

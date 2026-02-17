@@ -9,7 +9,7 @@
 }
 /* Type label (Education / Professional Experience) */
 .experience-type {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -28,7 +28,7 @@
   flex-direction: column;
   justify-content: flex-start; /* top-aligned */
   min-height: auto;
-  padding: var(--spacing-md) var(--spacing-lg);
+  padding: var(--spacing-md) var(--spacing-md);
   background-color: var(--color-section-bg);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-light);
