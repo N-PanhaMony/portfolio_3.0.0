@@ -39,6 +39,7 @@
 .experience-container .intro-section:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-medium);
+  border-color: var(--color-primary-hover);
 }
 
 /* Page title */
