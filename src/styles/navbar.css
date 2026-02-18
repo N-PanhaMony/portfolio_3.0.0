@@ -6,23 +6,30 @@
   top: 1rem;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--color-header-bg);
+  background-color: var(--color-section-bg);
   backdrop-filter: blur(12px);
   width: clamp(320px, 90vw, 1143px);
-  padding: 0.3rem 0.5rem;
-  border-radius: var(--radius-sm);
+  padding: 0.3rem 0.9rem;
+  border-radius: var(--radius-md);
   box-shadow: var(--shadow-light);
+  border: 1px solid var(--color-section-bg-alt);
   z-index: 2000;
   transition: all 0.3s ease;
 }
 
 
 .floating-header.scrolled {
+  font-size: 14px;
   width: clamp(300px, 70vw, 900px);
-  border-radius: var(--radius-md);
-  padding: 0.3rem 1rem;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  padding: 0.2rem 0.9rem; /* slightly tighter */
+  border-radius: 999px; /* more pill-like when scrolled */
+  background-color: rgba(255, 255, 255, 0.75); /* glass feel */
+  backdrop-filter: blur(16px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  background-color: var(--color-section-bg);
+  border-color: var(--color-primary-hover);
 }
+
 .floating-header.scrolled:hover {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
@@ -36,12 +43,12 @@
 
 .floating-header .nav-links {
   display: flex;
-  gap: 0.2rem;
+  gap: 0.1rem;
 }
 
 .floating-header .nav-links a {
   font-weight: 500;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.7rem;
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -71,12 +78,12 @@
 
 /* dark-mode */
 .theme-toggle {
-  margin-left: 1rem;
-  background: var(--color-section-bg);
-  border: none;
+  margin-left: 0.75rem; /* smaller, more balanced */
+  background: transparent;
+  border: 1px solid var(--color-section-bg-alt);
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   cursor: pointer;
   font-size: 1rem;
   display: flex;
@@ -85,8 +92,11 @@
   transition: all 0.3s ease;
 }
 
+
 .theme-toggle:hover {
   background: var(--color-primary);
   color: var(--color-bg);
-  box-shadow: var(--glow-primary);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+  transform: rotate(10deg);
 }
+
