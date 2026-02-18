@@ -44,19 +44,22 @@
 
 /* Page title */
 .section-title {
-  font-size: var(--fs-h1);
-  text-align: center;
-  margin: var(--spacing-lg) 0 var(--spacing-md) 0;
-  color: var(--color-primary);
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 700;
+  color: var(--color-text);
+  text-shadow: 0 0 10px rgba(99, 102, 241, 0.15);
 }
+
 
 /* Each experience item */
-.experience-item {
-  display: flex;
-  flex-wrap: nowrap; /* no wrapping */
-  padding: var(--spacing-sm);
-
+.section-title {
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-sm);
 }
+
 
 .experience-info {
   display: flex;
