@@ -151,3 +151,123 @@
     display: none;
   }
 }
+
+/* ==========================
+   HOME PAGE RESPONSIVE
+========================== */
+
+/* ================= MOBILE FIRST (Phones) <640px ================= */
+@media (max-width: 639px) {
+
+  main {
+    padding: 10px; /* reduce padding for small screens */
+  }
+
+  .intro-section {
+    padding: var(--spacing-md);
+    min-height: 35vh;
+    align-items: center; /* center content on small screens */
+    text-align: center;
+  }
+
+  .intro-section h1 {
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+  }
+
+  .intro-section .intro-description {
+    font-size: var(--fs-small);
+    max-width: 100%;
+  }
+
+  .links-container {
+    justify-content: center;
+    gap: var(--spacing-md);
+  }
+
+  .links-container a {
+    gap: var(--spacing-md);
+    padding: 0.5rem 0.8rem;
+  }
+
+  .highlights {
+    padding: var(--spacing-md);
+  }
+
+  .highlights h2 {
+    font-size: clamp(1.5rem, 4vw, 1.8rem);
+  }
+
+  .highlights ul li {
+    margin: var(--spacing-sm) 0;
+  }
+}
+
+/* ================= TABLET ≥768px ================= */
+@media (min-width: 768px) {
+
+  .intro-section {
+    padding: var(--spacing-lg);
+    min-height: 40vh;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .intro-section h1 {
+    font-size: clamp(2.2rem, 4vw, 2.8rem);
+  }
+
+  .intro-section .intro-description {
+    font-size: var(--fs-body);
+    max-width: 600px;
+  }
+
+  .links-container {
+    justify-content: flex-start;
+    gap: var(--spacing-lg);
+  }
+
+  .highlights {
+    padding: var(--spacing-lg);
+  }
+
+  .highlights h2 {
+    font-size: var(--fs-h2);
+  }
+
+  .highlights ul li {
+    margin: var(--spacing-md) 0;
+  }
+}
+
+/* ================= DESKTOP ≥1024px ================= */
+@media (min-width: 1024px) {
+
+  .intro-section {
+    padding: var(--spacing-xl);
+    min-height: 45vh;
+  }
+
+  .intro-section h1 {
+    font-size: var(--fs-h1);
+  }
+
+  .intro-section .intro-description {
+    max-width: 650px;
+  }
+
+  .links-container {
+    gap: var(--spacing-xl);
+  }
+
+  .highlights {
+    padding: var(--spacing-xl);
+  }
+
+  .highlights h2 {
+    font-size: var(--fs-h2);
+  }
+
+  .highlights ul li {
+    margin: var(--spacing-md) 0;
+  }
+}
