@@ -14,7 +14,7 @@ export default function Skills() {
             <section className="intro-section">
               
               {/* Category Header */}
-              <h2 style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+              <h2>
                 <FontAwesomeIcon icon={category.icon} />
                 {category.category}
               </h2>

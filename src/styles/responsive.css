@@ -387,3 +387,55 @@
     font-size: var(--fs-body);
   }
 }
+
+/* ==========================
+   RESPONSIVE – SKILLS PAGE
+========================== */
+
+/* 📱 Mobile (≤ 639px) */
+@media (max-width: 639px) {
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1 ;
+    gap: var(--spacing-md);
+  }
+
+  .skills-container .intro-section h2 {
+    font-size: 1.1rem;
+  }
+
+  .skills-container .tech-badge {
+    font-size: 0.75rem;
+  }
+}
+
+/* 📲 Tablet (640px – 1023px) */
+@media (min-width: 640px) and (max-width: 1023px) {
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: var(--spacing-md);
+  }
+  .skills-container .intro-section h2 {
+    font-size: 1.2rem;
+  }
+  .skills-container .tech-badge {
+    font-size: 0.8rem;
+  }
+
+}
+
+
+/* 🖥 Desktop (≥ 1024px) */
+@media (min-width: 1024px) {
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* default 2/2 */
+    gap: var(--spacing-md);
+  }
+  .skills-container .tech-badge {
+    font-size: 0.85rem;
+  }
+}
