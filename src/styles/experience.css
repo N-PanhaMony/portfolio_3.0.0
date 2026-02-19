@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: column;
 }
+
 /* Type label (Education / Professional Experience) */
 .experience-type {
   font-size: 0.8rem;
@@ -21,14 +22,13 @@
   margin-bottom: var(--spacing-sm);
 }
 
-
 /* Intro sections wrapper (Education / Work) */
 .experience-container .intro-section {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* top-aligned */
+  flex-direction: column;  /* keep column for hover effect container */
+  justify-content: flex-start;
   min-height: auto;
-  padding: var(--spacing-md) var(--spacing-md);
+  padding: var(--spacing-md);
   background-color: var(--color-section-bg);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-light);
@@ -48,27 +48,18 @@
   font-weight: 700;
   color: var(--color-text);
   text-shadow: 0 0 10px rgba(99, 102, 241, 0.15);
-}
-
-
-/* Each experience item */
-.section-title {
-  font-size: clamp(2rem, 3vw, 2.8rem);
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  color: var(--color-text);
   margin-bottom: var(--spacing-sm);
 }
 
-
-.experience-info {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  min-width: 0; /* allows text to shrink instead of wrapping */
+/* =========================
+   Experience Item Layout
+========================= */
+.experience-item {
+  display: flex;            /* row: logo + info */
+  flex-direction: row;
+  align-items: flex-start;  /* align top */
+  gap: var(--spacing-md);   /* space between logo and info */
 }
-
-
 
 /* Logo */
 .experience-logo {
@@ -77,7 +68,6 @@
   object-fit: contain;
   border-radius: var(--radius-sm);
   flex-shrink: 0;
-  margin-right: var(--spacing-md);
 }
 
 /* Info section */
@@ -85,7 +75,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  flex: 1;
+  flex: 1;                  /* take remaining space */
 }
 
 /* Headings */
@@ -139,4 +129,3 @@
   font-size: 1em;
   color: inherit;
 }
-

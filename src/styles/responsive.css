@@ -271,3 +271,119 @@
     margin: var(--spacing-md) 0;
   }
 }
+
+/* ==========================
+   EXPERIENCE PAGE RESPONSIVE
+========================== */
+/* ================= MOBILE (≤639px) ================= */
+@media (max-width: 639px) {
+  /* Stack logo above description */
+  .experience-item {
+    flex-direction: column !important; /* force column */
+    align-items: flex-start;               /* center everything */
+    text-align: left;
+    gap: var(--spacing-sm);
+  }
+
+  .experience-logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .experience-info {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .experience-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .experience-info .experience-position,
+  .experience-info .experience-location,
+  .experience-info .experience-duration {
+    font-size: 0.85rem;
+  }
+
+  .experience-details {
+    font-size: 0.85rem;
+    padding-left: 1rem;
+    text-align: left; /* keep list readable */
+  }
+
+  .experience-reference a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* ================= TABLET (≥640px & ≤1023px) ================= */
+@media (min-width: 640px) and (max-width: 1023px) {
+
+  .experience-item {
+    flex-direction: row;          /* keep side-by-side */
+    gap: var(--spacing-md);
+  }
+
+  .experience-logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .experience-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .experience-info .experience-position,
+  .experience-info .experience-location,
+  .experience-info .experience-duration {
+    font-size: 0.95rem;
+  }
+
+  .experience-details {
+    font-size: 0.95rem;
+    padding-left: 1.5rem;
+  }
+
+  .experience-reference a {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* ================= DESKTOP (≥1024px) ================= */
+@media (min-width: 1024px) {
+
+  .experience-item {
+    flex-direction: row;
+    gap: var(--spacing-md);
+  }
+
+  .experience-logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .experience-info h3 {
+    font-size: var(--fs-title);
+  }
+
+  .experience-info .experience-position,
+  .experience-info .experience-location,
+  .experience-info .experience-duration {
+    font-size: var(--fs-body);
+  }
+
+  .experience-details {
+    font-size: var(--fs-body);
+    padding-left: 1.5rem;
+  }
+
+  .experience-reference a {
+    padding: 0.5rem 1rem;
+    font-size: var(--fs-body);
+  }
+}
