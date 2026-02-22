@@ -10,7 +10,7 @@ import {
   FaSun
 } from "react-icons/fa";
 
-import logo from "../../assets/icons/logo_v3.png";
+import logo from "../../assets/icons/Logo_v3.png";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
