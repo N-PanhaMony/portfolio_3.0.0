@@ -2,14 +2,6 @@
    PROJECTS PAGE
 ========================== */
 
-/* Projects Grid */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--spacing-md);
-  align-items: stretch;
-}
-
 /* Project Card */
 .project-card {
   display: flex;

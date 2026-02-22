@@ -3,7 +3,7 @@ import SocialLinks from "../components/ui/SocialLinks.jsx";
 
 export default function Home() {
   return (
-    <section id="home">
+    <section id="home" className="home-container">
       {/* Hero / Intro Section */}
       <FadeInSection>
         <div className="intro-section">

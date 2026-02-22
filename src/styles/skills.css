@@ -2,14 +2,6 @@
    SKILLS PAGE
 ========================== */
 
-.skills-container {
-  padding: 0;
-  max-width: 1200px;
-
-}
-
-
-
 /* Skill Card */
 .skills-container .intro-section {
   display: flex;
