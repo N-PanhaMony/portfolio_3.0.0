@@ -38,7 +38,7 @@ export default function About() {
         <FadeInSection>
           <div className="intro-section about-right">
             {/* About Description */}
-            <h2 className="subtitle">About Me</h2>
+            <h2 className="subtitle">Me:</h2>
             <div className="about-description">
               <p className="about-intro">
                 Full-stack developer in progress with a strong focus on backend architecture, 
