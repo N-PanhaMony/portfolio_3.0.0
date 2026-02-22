@@ -12,7 +12,7 @@ export default function About() {
 
         {/* LEFT SIDE */}
         <FadeInSection>
-          <div className="intro-section about-left">
+          <div className="about-left">
             {/* Profile Image */}
             <div className="about-image">
               <img 
@@ -36,7 +36,7 @@ export default function About() {
 
         {/* RIGHT SIDE */}
         <FadeInSection>
-          <div className="intro-section about-right">
+          <div className="about-right">
             {/* About Description */}
             <h2 className="subtitle">Me:</h2>
             <div className="about-description">

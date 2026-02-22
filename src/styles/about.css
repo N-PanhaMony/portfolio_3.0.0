@@ -2,6 +2,15 @@
    ABOUT PAGE
 ========================== */
 
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-container:hover {
+  border-color: var(--color-primary-hover);
+}
 /* --------------------------
    About Page Title & Subtitle
 ----------------------------*/
@@ -35,42 +44,29 @@
   align-items: stretch;
 } */
 
-/* --------------------------
-   Intro Sections Reuse
-----------------------------*/
-.about-container .intro-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  min-height: auto;
-  padding: var(--spacing-md);
-  background-color: var(--color-section-bg);
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-light);
-  border: 1px solid var(--color-section-bg-alt);
-  transition: all 0.3s ease;
-}
-.about-container .intro-section:hover {
-  box-shadow: var(--shadow-medium);
-  transform: translateY(-2px);
-  border-color: var(--color-primary-hover);
-  
-}
 
 /* Left & Right adjustments */
 .about-left,
 .about-right {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  gap: var(--spacing-sm);
-}
-.about-left {
   justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 100%; /* fill grid row height */
+  padding: var(--spacing-md);
+  background-color: var(--color-section-bg);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-light);
+  border: 1px solid var(--color-section-bg-alt);
+  gap: var(--spacing-sm);
+  transition: all 0.3s ease;
 }
-.about-right {
-  justify-content: space-between;
+
+.about-left:hover,
+.about-right:hover {
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-2px);
+  border-color: var(--color-primary-hover);
 }
 
 /* --------------------------
@@ -109,6 +105,12 @@
 /* --------------------------
    Core Strengths / Highlights
 ----------------------------*/
+.about-highlights {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center children horizontally */
+  text-align: center;
+}
 .about-highlights ul,
 .experience-details {
   list-style: disc;
