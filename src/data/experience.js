@@ -1,9 +1,11 @@
 // src/data/experience.js
+import ruppLogo from "../assets/icons/rupp_noBG.png";
+import mocfaLogo from "../assets/icons/MoCFA_logo.png";
 
 export const experienceData = [
   {
     type: "Education",
-    logo: "/src/assets/icons/rupp_noBG.png",
+    logo: ruppLogo,
     name: "Royal University of Phnom Penh",
     position: "Bachelor of Science in Computer Science and Engineering",
     location: "Phnom Penh, Cambodia",
@@ -17,7 +19,7 @@ export const experienceData = [
   },
   {
     type: "Career",
-    logo: "/src/assets/icons/MoCFA_logo.png",
+    logo: mocfaLogo,
     name: "Ministry of Culture and Fine Arts",
     position: "IT Support / Data Entry",
     location: "Phnom Penh, Cambodia",
