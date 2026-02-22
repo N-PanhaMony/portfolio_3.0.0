@@ -563,44 +563,51 @@
 ========================== */
 
 /* 📱 Mobile (≤ 639px) */
+/* ==========================
+   RESPONSIVE – ABOUT PAGE (Mobile-First)
+========================== */
+
+/* 📱 Mobile (≤ 639px) */
+/* Mobile fix for .about-left */
 @media (max-width: 639px) {
-  .about-container {
-    padding: 0 var(--spacing-sm); /* side spacing */
+  .about-container{
+    padding: 0 var(--spacing-sm);
   }
 
-  .about-grid {
+.about-grid {
     display: grid;
-    grid-template-columns: 1fr; /* full width stack */
+    grid-template-columns: 1fr; /* stack everything */
     gap: var(--spacing-sm);
+    align-items: center; /* center content vertically */
+  }
+  .about-left .about-highlights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;          /* center everything horizontally */
+    width: 100%;                  /* allow full width */
   }
 
-  .about-image img {
-    width: 150px;
-    height: 150px;
+  .about-left .about-highlights h3 {
+    margin: 0 auto;               /* center title */
   }
 
-  .about-left h3,
-  .about-right h2 {
-    font-size: 1rem;
-  }
-
-  .about-description p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-  }
-
-  .stat-card {
-    flex: 1 1 100%; /* full width */
+  .about-left .about-highlights ul li {
+    justify-content: center;      /* center icon + text */
   }
 }
-
 /* 📲 Tablet (640px – 1023px) */
 @media (min-width: 640px) and (max-width: 1023px) {
   .about-grid {
     display: grid;
-    grid-template-columns: 350px 1fr; 
+    grid-template-columns: 1fr; /* stack everything */
     gap: var(--spacing-sm);
-    align-items: stretch;
+    align-items: center; /* center content vertically */
+  }
+  .about-left .about-highlights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;          /* center everything horizontally */
+    width: 100%;                  /* allow full width */
   }
 
   .about-image img {
@@ -611,10 +618,6 @@
   .about-left h3,
   .about-right h2 {
     font-size: var(--fs-subtitle);
-  }
-
-  .stat-card {
-    flex: 1 1 45%; /* 2 per row */
   }
 }
 
