@@ -10,7 +10,7 @@
     bottom: 1rem;                     /* float above bottom */
     left: 50%;
     transform: translateX(-50%);
-    width: 90vw;                       /* normal size */
+    width: 95vw;                       /* normal size */
     padding: 0.4rem 0.5rem;
     border-radius: var(--radius-md);   /* full rounded */
     backdrop-filter: blur(12px);
@@ -21,7 +21,7 @@
   }
 
   .floating-header.scrolled {
-    width: 85vw;
+    width: 90vw;
     padding: 0.5rem 1rem;
     border-radius: var(--radius-md);
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
@@ -33,13 +33,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 0.3rem;
+    gap: var(--spacing-md);
   }
 
   .floating-header .nav-links {
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
+    gap: var(--spacing-sm);
   }
 
   .nav-toggle-separator {
