@@ -45,7 +45,11 @@ const iconMap = {
   "Node.js": <FontAwesomeIcon icon={faNodeJs} size="sm" />,
   Express: <SiExpress size={14} />,
   "Prisma / PostgreSQL": <SiPostgresql size={14} />,
+  Prisma: <SiPrisma size={14} />,
+  PostgreSQL: <SiPostgresql size={14} />,
   Firebase: <SiFirebase size={14} />,
+  "Firebase Auth": <SiFirebase size={14} />,
+Firestore: <SiFirebase size={14} />,
 
   /* ==========================
      DEVOPS

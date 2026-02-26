@@ -28,7 +28,7 @@ export const skillsData = [
     skills: [
       { name: "Git / GitHub", level: "Advanced" },
       { name: "Docker", level: "Beginner" },
-      { name: "Render", level: "Intermediate" },
+      { name: "Render", level: "Beginner" },
       { name: "CI/CD", level: "Learning" },
     ],
   },
