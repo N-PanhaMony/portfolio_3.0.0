@@ -89,7 +89,6 @@
 
 /* ================= THEME TOGGLE ================= */
 .theme-toggle {
-  margin-left: 0.75rem;
   background: transparent;
   border: 1px solid var(--color-section-bg-alt);
   border-radius: 50%;
