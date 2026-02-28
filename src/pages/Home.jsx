@@ -18,8 +18,8 @@ export default function Home() {
           </p>
 
           <div className="links-container">
-            <a className="btn-primary" href="mailto:youremail@example.com">
-              Contact Me
+            <a className="btn-primary">
+              Contact Me :
             </a>
             <SocialLinks />
           </div>
