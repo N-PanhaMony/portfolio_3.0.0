@@ -1,10 +1,10 @@
-import { FaGithub, FaLinkedin, FaInstagram, FaTelegram } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTelegram } from "react-icons/fa";
 
 export default function SocialLinks() {
   return (
     <div className="social-links">
       <a
-        href="https://github.com/yourusername"
+        href="https://github.com/N-PanhaMony"
         target="_blank"
         rel="noopener noreferrer"
         className="social-link"
@@ -14,7 +14,7 @@ export default function SocialLinks() {
       </a>
 
       <a
-        href="https://linkedin.com/in/yourusername"
+        href="https://www.linkedin.com/in/neang-panhamony"
         target="_blank"
         rel="noopener noreferrer"
         className="social-link"
@@ -24,17 +24,7 @@ export default function SocialLinks() {
       </a>
 
       <a
-        href="https://instagram.com/yourusername"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="social-link"
-        title="Instagram"
-      >
-        <FaInstagram />
-      </a>
-
-      <a
-        href="https://t.me/yourtelegram"
+        href="https://t.me/NeangPanhaMony"
         target="_blank"
         rel="noopener noreferrer"
         className="social-link"
