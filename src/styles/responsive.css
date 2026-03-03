@@ -63,6 +63,9 @@
   .logo {
     display: none;
   }
+  .theme-toggle {
+    border: none;
+  }
 }
 
 /* ================= ≥ 768px (Tablet) ================= */
