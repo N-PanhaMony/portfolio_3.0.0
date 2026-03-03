@@ -74,7 +74,7 @@ export default function About() {
 
             {/* Download CV Button */}
             <div className="experience-reference about-actions">
-              <a href="/cv.pdf" download className="btn-download">
+              <a href="/Neang_Panhamony_CV.pdf" download className="btn-download">
                 Download CV
               </a>
             </div>
