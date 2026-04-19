@@ -65,6 +65,14 @@
   }
   .theme-toggle {
     border: none;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .theme-toggle:hover {
+    background: transparent;
+    box-shadow: none;
+    color: var(--color-text);
   }
 }
 
